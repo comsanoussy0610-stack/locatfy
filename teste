@@ -1,0 +1,21 @@
+use std::io;
+
+fn main() {
+    println!("Bienvenue dans notre boutique en ligne !");
+    println!("Aujourd'hui, nous vous proposons une superbe chemise en coton pour un prix de 29.99€.");
+    println!("Voici quelques-uns de ses caractéristiques :");
+    println!("- Matière : 100% coton");
+    println!("- Tailles disponibles : S, M, L, XL");
+    println!("- Couleurs disponibles : Blanc, Noir, Rouge, Bleu");
+    println!("- Disponible en stock");
+
+    println!("\nVoulez-vous acheter cette chemise ? (O/N)");
+    let mut choix = String::new();
+    io::stdin().read_line(&mut choix).expect("Erreur de lecture");
+
+    if choix.trim().to_uppercase() == "O" {
+        println!("Merci pour votre achat ! Votre chemise sera expédiée dans les 24h.");
+    } else {
+        println!("Merci pour votre intérêt. Au revoir !");
+    }
+}
